@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load typogrify %}
+
+{% block content %}
+{% filter typogrify %}
+<div class="content flatpages">
+  <h2>Page Not Found</h2>
+  <p>No page exists at this address. While you're here, please view my <a href="{% url portfolio %}">portfolio</a>.</p>
+</div>
+{% endfilter %}
+{% endblock %}

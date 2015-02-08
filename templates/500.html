@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load typogrify %}
+
+{% block content %}
+{% filter typogrify %}
+<div class="content flatpages">
+  <h2>Server Error</h2>
+  <p>The site is experiencing temporary difficulties. However, while you're here, please view my <a href="{% url portfolio %}">portfolio</a>.</p>
+</div>
+{% endfilter %}
+{% endblock %}

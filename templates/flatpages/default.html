@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load typogrify %}
+{% load markup %}
+
+{% block content %}
+{% filter typogrify %}
+<div class="content flatpage">
+  <h2>{{ flatpage.title|title }}</h2>
+	{{ flatpage.content|markdown }}
+</div>
+{% endfilter %}
+{% endblock %}
